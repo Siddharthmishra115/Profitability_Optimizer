@@ -1,0 +1,14 @@
+,value
+total_sales,12642905.0
+total_profit,1467458.40128
+profit_margin,0.11606971667350187
+orders,25035.0
+order_lines,51289.0
+customers,4873.0
+products,10768.0
+countries,147.0
+loss_making_lines_pct,0.2445553627483476
+profit_from_profitable_lines,2388103.4469999997
+profit_destroyed_by_loss_lines,-920645.04572
+discount_given_away,2363198.5425726534
+shipping_cost_pct_of_sales,0.10700196619368726

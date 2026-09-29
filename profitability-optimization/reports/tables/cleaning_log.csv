@@ -1,0 +1,18 @@
+step,detail,rows_affected
+load,"Raw file: 51,290 rows x 27 columns",0
+drop_constant_columns,Dropped constant column(s): ['记录数'],0
+rename_columns,Renamed columns to snake_case,0
+strip_whitespace,Trimmed leading/trailing spaces in text columns,0
+parse_dates,Parsed order_date / ship_date to datetime,0
+missing_values,Null cells found across dataset,0
+duplicates,Exact duplicate rows removed; duplicate row_id = 0,0
+validate_ship_date,Rows where ship_date < order_date,0
+validate_year,Rows where Year column disagrees with order_date,0
+validate_discount_range,"Rows with discount outside [0, 1]",0
+remove_zero_sales,Removed rows with sales <= 0 (margin undefined; profit impact negligible),1
+round_discount,"Rounded discount to 2 dp (0.002 -> 0.00, 0.202 -> 0.20 ...); LATAM precision artefact",629
+caveat_product_id,product_id values mapped to >1 product_name -> using product_id + product_name as product key,457
+caveat_customer_id,"customer_id is market-specific: 4,873 IDs vs 795 names. Customer analysis uses customer_id (customer account per market).",0
+caveat_sales_rounding,Sales is stored as whole currency units in the source; left as-is,0
+feature_engineering,"Added margin, discount band, gross sales, shipping %, ship days, flags",0
+final,"Clean file: 51,289 rows x 41 columns",0
